@@ -1,0 +1,221 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  /* Kisan Sathi Color Palette */
+  --background: #F7F6F2;
+  --foreground: #1C1C1C;
+  --card: #FFFFFF;
+  --card-foreground: #1C1C1C;
+  --popover: #FFFFFF;
+  --popover-foreground: #1C1C1C;
+  --primary: #378632;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F4AE29;
+  --secondary-foreground: #1C1C1C;
+  --muted: #EAE5D4;
+  --muted-foreground: #707070;
+  --accent: #EAE5D4;
+  --accent-foreground: #1C1C1C;
+  --destructive: #D34C24;
+  --destructive-foreground: #FFFFFF;
+  --border: #E3E3E3;
+  --input: #FAFBFA;
+  --input-background: #FAFBFA;
+  --switch-background: #ECECEC;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #378632;
+  /* Custom Krishi colors */
+  --navigation-bar: #224F27;
+  --navigation-text: #FFFFFF;
+  --bottom-nav: #FFFFFF;
+  --active-icon: #378632;
+  --inactive-icon: #A4B6A7;
+  --secondary-text: #707070;
+  --link-color: #378632;
+  --error-color: #D34C24;
+  --success-color: #378632;
+  --warning-color: #F4AE29;
+  --disabled-bg: #ECECEC;
+  --placeholder-color: #A4B6A7;
+  --weather-rain: #3391E6;
+  --weather-sun: #F4AE29;
+  --chart-1: #378632;
+  --chart-2: #F4AE29;
+  --chart-3: #224F27;
+  --chart-4: #3391E6;
+  --chart-5: #EAE5D4;
+  --radius: 0.75rem;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #1C1C1C;
+  --sidebar-primary: #378632;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #EAE5D4;
+  --sidebar-accent-foreground: #1C1C1C;
+  --sidebar-border: #E3E3E3;
+  --sidebar-ring: #378632;
+}
+
+.dark {
+  /* Keep same colors for dark mode - Kisan Sathi uses light theme only */
+  --background: #F7F6F2;
+  --foreground: #1C1C1C;
+  --card: #FFFFFF;
+  --card-foreground: #1C1C1C;
+  --popover: #FFFFFF;
+  --popover-foreground: #1C1C1C;
+  --primary: #378632;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F4AE29;
+  --secondary-foreground: #1C1C1C;
+  --muted: #EAE5D4;
+  --muted-foreground: #707070;
+  --accent: #EAE5D4;
+  --accent-foreground: #1C1C1C;
+  --destructive: #D34C24;
+  --destructive-foreground: #FFFFFF;
+  --border: #E3E3E3;
+  --input: #FAFBFA;
+  --ring: #378632;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: #378632;
+  --chart-2: #F4AE29;
+  --chart-3: #224F27;
+  --chart-4: #3391E6;
+  --chart-5: #EAE5D4;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #1C1C1C;
+  --sidebar-primary: #378632;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #EAE5D4;
+  --sidebar-accent-foreground: #1C1C1C;
+  --sidebar-border: #E3E3E3;
+  --sidebar-ring: #378632;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  /* Krishi custom colors */
+  --color-navigation-bar: var(--navigation-bar);
+  --color-navigation-text: var(--navigation-text);
+  --color-bottom-nav: var(--bottom-nav);
+  --color-active-icon: var(--active-icon);
+  --color-inactive-icon: var(--inactive-icon);
+  --color-secondary-text: var(--secondary-text);
+  --color-link: var(--link-color);
+  --color-error: var(--error-color);
+  --color-success: var(--success-color);
+  --color-warning: var(--warning-color);
+  --color-disabled-bg: var(--disabled-bg);
+  --color-placeholder: var(--placeholder-color);
+  --color-weather-rain: var(--weather-rain);
+  --color-weather-sun: var(--weather-sun);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
