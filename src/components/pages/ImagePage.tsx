@@ -5,6 +5,47 @@ import { Button } from '../ui/button';
 import { Card } from '../ui/card';
 import { Alert, AlertDescription } from '../ui/alert';
 import type { Language, UserInfo } from '../../App';
+import { GoogleGenerativeAI } from "@google/generative-ai";
+const API_KEY = import.meta.env.VITE_GEMINI_API_KEY || "";
+const genAI = new GoogleGenerativeAI(API_KEY);
+const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
+
+export const geminiApi = {
+  analyzeImage: async (imageData: string, lang: string, location: string) => {
+    try {
+      // remove "data:image/...;base64," prefix
+      const base64 = imageData.split(",")[1] || imageData;
+
+      const prompt = `
+        You are an agricultural assistant. 
+        The user is from ${location}.
+        Reply only in ${lang}.
+        Analyze the uploaded crop image and provide clear advice about:
+        - Disease or pest signs
+        - Organic / chemical solutions
+        - Preventive measures
+      `;
+
+      const result = await model.generateContent([
+        {
+          role: "user",
+          parts: [
+            { inlineData: { mimeType: "image/jpeg", data: base64 } },
+            { text: prompt }
+          ],
+        },
+      ]);
+
+      return result.response.text();
+    } catch (error) {
+      console.error("Gemini API error:", error);
+      return "⚠️ Error: Unable to analyze image right now.";
+    }
+  },
+};
+
+
 
 const translations = {
   hi: {
