@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { AppProvider } from './context/AppContext';
 import LanguageSelection from './components/LanguageSelection';
 import UserInfoForm from './components/UserInfoForm';
 import WelcomeScreen from './components/WelcomeScreen';
@@ -20,7 +21,7 @@ export type UserInfo = {
 export type AppStep = 'permissions' | 'language' | 'userInfo' | 'welcome' | 'main';
 
 function App() {
-  const [currentStep, setCurrentStep] = useState<AppStep>('permissions');
+  const [currentStep, setCurrentStep] = useState<AppStep>('language');
   const [selectedLanguage, setSelectedLanguage] = useState<Language | null>(null);
   const [userInfo, setUserInfo] = useState<UserInfo | null>(null);
 
@@ -35,18 +36,21 @@ function App() {
       setSelectedLanguage(JSON.parse(savedLanguage));
       setUserInfo(JSON.parse(savedUserInfo));
       setCurrentStep('main');
+    } else if (savedLanguage) {
+      setSelectedLanguage(JSON.parse(savedLanguage));
+      setCurrentStep('permissions');
     }
   }, []);
 
   const handlePermissionsComplete = () => {
     localStorage.setItem('krishi-permissions-checked', 'true');
-    setCurrentStep('language');
+    setCurrentStep('userInfo');
   };
 
   const handleLanguageSelect = (language: Language) => {
     setSelectedLanguage(language);
     localStorage.setItem('krishi-language', JSON.stringify(language));
-    setCurrentStep('userInfo');
+    setCurrentStep('permissions');
   };
 
   const handleUserInfoSubmit = (info: UserInfo) => {
@@ -68,8 +72,9 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#F7F6F2' }}>
-      <AnimatePresence mode="wait">
+    <AppProvider language={selectedLanguage || { code: 'en', name: 'English', nativeName: 'English' }} userInfo={userInfo || { name: '', location: '' }}>
+      <div className="min-h-screen" style={{ backgroundColor: '#F7F6F2' }}>
+        <AnimatePresence mode="wait">
         {currentStep === 'permissions' && (
           <motion.div
             key="permissions"
@@ -79,7 +84,7 @@ function App() {
             transition={{ duration: 0.4 }}
           >
             <PermissionsScreen
-              language={{ code: 'en', name: 'English', nativeName: 'English' }}
+              language={selectedLanguage || { code: 'en', name: 'English', nativeName: 'English' }}
               userInfo={{ name: '', location: '' }}
               onComplete={handlePermissionsComplete}
             />
@@ -144,7 +149,8 @@ function App() {
         )}
       </AnimatePresence>
     </div>
-  );
+  </AppProvider>
+);
 }
 
 export default App;

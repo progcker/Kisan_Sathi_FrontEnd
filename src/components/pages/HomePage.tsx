@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
-import { Mic, MessageSquare, Image, Sparkles, Sun, Leaf } from 'lucide-react';
+import { Mic, MessageSquare, Image, Sparkles, Sun, Leaf, LogOut } from 'lucide-react';
 import { Button } from '../ui/button';
 import { Card } from '../ui/card';
 import { Alert, AlertDescription } from '../ui/alert';
@@ -48,7 +48,7 @@ const translations = {
     imageTitle: 'பட பகுப்பாய்வு',
     imageDesc: 'பயிர் புகைப்படங்களை அனுப்புங்கள்',
     quickReminder: 'இன்றைய பணி',
-    reminderText: 'இன்று காலையில் உங்கள் வயல்��ளை சரிபார்க்க மறக்காதீர்கள்!',
+    reminderText: 'இன்று காலையில் உங்கள் வயல்களை சரிபார்க்க மறக்காதீர்கள்!',
     goodMorning: 'காலை வணக்கம்',
     goodAfternoon: 'மதிய வணக்கம்',
     goodEvening: 'மாலை வணக்கம்',
@@ -61,7 +61,7 @@ const translations = {
     textTitle: 'టెక్స్ట్ ప్రశ్న',
     textDesc: 'టైప్ చేసి ప్రశ్నలు అడగండి',
     imageTitle: 'చిత్ర విశ్లేషణ',
-    imageDesc: 'పంటల ఫొటోలు పంపండి',
+    imageDesc: 'పంటల ఫోటోలు పంపండి',
     quickReminder: 'ఈ రోజు పని',
     reminderText: 'ఈ ఉదయం పొలాలను తనిఖీ చేయడం మర్చిపోవద్దు!',
     goodMorning: 'శుభోదయం',
@@ -91,7 +91,7 @@ const translations = {
     textTitle: 'ಪಠ್ಯ ಪ್ರಶ್ನೆ',
     textDesc: 'ಟೈಪ್ ಮಾಡಿ ಪ್ರಶ್ನೆ ಕೇಳಿ',
     imageTitle: 'ಚಿತ್ರ ವಿಶ್ಲೇಷಣೆ',
-    imageDesc: 'ಬೆಳೆ ಫೋಟೋಗ��ನ್ನು ಕಳುಹಿಸಿ',
+    imageDesc: 'ಬೆಳೆ ಫೋಟೋಗಳನ್ನು ಕಳುಹಿಸಿ',
     quickReminder: 'ಇಂದಿನ ಕೆಲಸ',
     reminderText: 'ಈ ಬೆಳಗ್ಗೆ ಹೊಲ ಪರಿಶೀಲಿಸಲು ಮರೆತಿರಬೇಡಿ!',
     goodMorning: 'ಶುಭೋದಯ',
@@ -156,10 +156,10 @@ const translations = {
     reminderText: 'ਅੱਜ ਸਵੇਰੇ ਖੇਤ ਦੀ ਜਾਂਚ ਕਰਨਾ ਨਾ ਭੁੱਲੋ!',
     goodMorning: 'ਸਤ ਸ੍ਰੀ ਅਕਾਲ',
     goodAfternoon: 'ਨਮਸਕਾਰ',
-    goodEvening: 'ਸ਼ੁਭ ਸ਼ਾਮ',
+    goodEvening: 'ਸ਼ੁਭ ਸ਼ਾਮ',
   },
   ur: {
-    greeting: 'کسان ساتھی آپ کا پُر خلوص استقبال کرتا ہے',
+    greeting: 'کسान ساتھی آپ کا پُر خلوص استقبال کرتا ہے',
     subtitle: 'آپ کی کاشتکاری کے سفر میں آپ کا ساتھی',
     voiceTitle: 'صوتی معاون',
     voiceDesc: 'اپنی مسئلہ بتائیں',
@@ -176,7 +176,7 @@ const translations = {
   or: {
     greeting: 'କିସାନ ସାଥି ଆପଣଙ୍କୁ ହୃଦୟପୂର୍ବକ ସ୍ବାଗତ କରେ',
     subtitle: 'ଆପଣଙ୍କ କୃଷି ଯାତ୍ରାରେ ସହଭାଗୀ',
-    voiceTitle: 'ଭଏସ୍ ଆସିଷ୍ଟାଣ୍ଟ',
+    voiceTitle: 'ଭୋଇସ୍ ଆସିଷ୍ଟାଣ୍ଟ',
     voiceDesc: 'ଆପଣଙ୍କ ସମସ୍ୟା କହନ୍ତୁ',
     textTitle: 'ଟେକ୍ସଟ୍ ପ୍ରଶ୍ନ',
     textDesc: 'ଲେଖି ପ୍ରଶ୍ନ ପଚାରନ୍ତୁ',
@@ -189,7 +189,7 @@ const translations = {
     goodEvening: 'ଶୁଭ ସନ୍ଧ୍ୟା',
   },
   as: {
-    greeting: 'কিছান সাথী আপোনাক হৃদয়পূৰ্বক স্বাগতম জনাইছে',
+    greeting: 'কিছান সাথী আপোনাক হৃদয়পূৰ্বক স্বাগতম জনাইছে',
     subtitle: 'আপোনাৰ কৃষি যাত্ৰাৰ সংগী',
     voiceTitle: 'ভইচ এচিষ্টেণ্ট',
     voiceDesc: 'আপোনাৰ সমস্যা কওক',
@@ -210,7 +210,7 @@ const translations = {
     voiceDesc: 'अपना समस्या बोल के बताव',
     textTitle: 'लिख के पूछीं',
     textDesc: 'लिख के सवाल पूछऽ',
-    imageTitle: 'फोटो से जानीं',
+    imageTitle: 'फोटो से जानऽ',
     imageDesc: 'फसल के फोटो भेजऽ',
     quickReminder: 'आज के काम',
     reminderText: 'सुबह खेत देखे के मत भुलऽ!',
@@ -231,9 +231,9 @@ const translations = {
     reminderText: 'काल्हि सबेर खेत जाँच करबाक नहि बिसरू!',
     goodMorning: 'सुप्रभात',
     goodAfternoon: 'नमस्कार',
-    goodEvening: 'शु��� संध्याकाल',
+    goodEvening: 'शुभ संध्याकाल',
   },
-  magahi: {
+  mag: {
     greeting: 'किसान साथी तोहार हार्दिक स्वागत करेला',
     subtitle: 'खेती के सफर में तोहार साथी',
     voiceTitle: 'बोल के पूछऽ',
@@ -252,7 +252,7 @@ const translations = {
     greeting: 'कृषकसखा भवतः हार्दिकं स्वागतं करोति',
     subtitle: 'कृषेः यात्रायां भवतः सहचरः',
     voiceTitle: 'ध्वनिना पृच्छतु',
-    voiceDesc: 'स्वीयं समस्या वक्तुम्',
+    voiceDesc: 'स्वीयं समस्या वक्तम्',
     textTitle: 'लेखनेन पृच्छतु',
     textDesc: 'लिखित्वा प्रश्नं पृच्छतु',
     imageTitle: 'चित्रेण जानातु',
@@ -266,14 +266,14 @@ const translations = {
   sd: {
     greeting: 'کسان ساتھی توھان جو دل سان استقبال ڪري ٿو',
     subtitle: 'توهان جي زرعي سفر ۾ ساٿي',
-    voiceTitle: 'آواز اسسٽنٽ',
+    voiceTitle: 'آواز مددگار',
     voiceDesc: 'پنهنجي مسئلي کي ٻڌايو',
     textTitle: 'متن سوال',
-    textDesc: 'لکندي سوال پڇو',
-    imageTitle: 'تصوير تجزيو',
+    textDesc: 'لکھن س سوال پڇو',
+    imageTitle: 'تصویر تجزیہ',
     imageDesc: 'فصل جون تصويرون موڪليو',
-    quickReminder: 'اڄ جو ڪم',
-    reminderText: 'صبح جو پنهنجا ٻيا نه وساريو!',
+    quickReminder: 'اَز کا کام',
+    reminderText: 'سوبح خئت چیک کرن مٲ نہ بھلویو!',
     goodMorning: 'صبح بخير',
     goodAfternoon: 'نمازڪار',
     goodEvening: 'شام جو سلام',
@@ -333,13 +333,13 @@ const translations = {
     imageTitle: 'པར་རིས་དབྱེ་ཞིབ།',
     imageDesc: 'སྲོག་འབྲུག་གི་པར་གཏོང་།',
     quickReminder: 'དེ་རིང་གི་ལས་འགན།',
-    reminderText: 'དགུང་དགུང་ཞིང་འབྲེལ་ཞିབ་བཤེར་མ་བརྗེད།',
+    reminderText: 'དགུང་དགུང་ཞིང་འབྲེལ་ཞིབ་བཤེར་མ་བརྗེད།',
     goodMorning: 'ཞོགས་ཕྱིན་བདེ་ལེགས།',
     goodAfternoon: 'ཉིན་གུང་བདེ་ལེགས།',
     goodEvening: 'དགོང་མོ་བདེ་ལེགས།',
   },
   ks: {
-    greeting: 'کسان ساتھی توہند خیرمقدم کران',
+    greeting: 'کسान ساتھی توہند خیرمقدم کران',
     subtitle: 'توہند کھیتی سفرس منز ساتھی',
     voiceTitle: 'آواز اسسٹنٹ',
     voiceDesc: 'پننۍ مسلہ کھیو',
@@ -350,8 +350,8 @@ const translations = {
     quickReminder: 'اَز کا کام',
     reminderText: 'سوبح خئت چیک کرن مٲ نہ بھلویو!',
     goodMorning: 'صبح بخیر',
-    goodAfternoon: 'نمस्कार',
-    goodEvening: 'شام بخیر',
+    goodAfternoon: 'نمازڪار',
+    goodEvening: 'شام جو سلام',
   },
   doi: {
     greeting: 'किसान साथी तुहाडा दिलों स्वागत करदा ऐ',
@@ -379,7 +379,7 @@ interface HomePageProps {
 export default function HomePage({ language, userInfo, onNavigate }: HomePageProps) {
   const [greeting, setGreeting] = useState('');
   const [showReminder, setShowReminder] = useState(true);
-  
+
   const t = translations[language.code as keyof typeof translations] || translations.hi;
 
   useEffect(() => {
@@ -438,9 +438,9 @@ export default function HomePage({ language, userInfo, onNavigate }: HomePagePro
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="flex justify-between items-center mb-12"
         >
-          <div className="flex items-center justify-center mb-6">
+          <div className="flex items-center">
             <motion.div
               animate={{ rotate: [0, 8, -8, 0] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
@@ -461,20 +461,29 @@ export default function HomePage({ language, userInfo, onNavigate }: HomePagePro
               <Sun className="h-6 w-6" style={{ color: '#FFFFFF' }} />
             </motion.div>
           </div>
-          
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => {
+              localStorage.clear();
+              window.location.reload();
+            }}
+            className="p-2"
+            style={{ color: '#064E3B' }}
+          >
+            <LogOut className="h-5 w-5" />
+          </Button>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.5 }}
+          className="text-center mb-8"
+        >
           <h1 className="text-2xl mb-3" style={{ color: '#224F27' }}>
             {greeting}{userInfo.name ? `, ${userInfo.name}` : ''}!
           </h1>
-          
-          <motion.h2
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.3, duration: 0.5 }}
-            className="text-xl mb-2" style={{ color: '#378632' }}
-          >
-            {t.greeting}
-          </motion.h2>
-          
           <p style={{ color: '#707070' }}>{t.subtitle}</p>
         </motion.div>
 

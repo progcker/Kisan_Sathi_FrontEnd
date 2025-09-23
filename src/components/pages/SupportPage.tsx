@@ -24,6 +24,7 @@ import type { Language, UserInfo } from "../../App";
 const translations = {
   hi: {
     title: "सहायता केंद्र",
+    upcoming: "आगामी",
     subtitle: "खेती से जुड़ी हर समस्या का समाधान",
     commonIssues: "आम समस्याएं",
     videos: "शिक्षाप्रद वीडियो",
@@ -47,6 +48,7 @@ const translations = {
   },
   en: {
     title: "Support Center",
+    upcoming: "Upcoming",
     subtitle: "Solutions for every farming problem",
     commonIssues: "Common Issues",
     videos: "Educational Videos",
@@ -70,6 +72,7 @@ const translations = {
   },
   ta: {
     title: "ஆதரவு மையம்",
+    upcoming: "வரவிருக்கும்",
     subtitle: "ஒவ்வொரு விவசாய பிரச்சனைக்கும் தீர்வு",
     commonIssues: "பொதுவான பிரச்சனைகள்",
     videos: "கல்வி வீடியோக்கள்",
@@ -93,6 +96,7 @@ const translations = {
   },
   te: {
     title: "సహాయ కేంద్రం",
+    upcoming: "రానున్న",
     subtitle: "ప్రతి వ్యవసాయ సమస్యకు పరిష్కారం",
     commonIssues: "సాధారణ సమస్యలు",
     videos: "విద్యా వీడియోలు",
@@ -116,6 +120,7 @@ const translations = {
   },
   kn: {
     title: "ಸಹಾಯ ಕೇಂದ್ರ",
+    upcoming: "ಬರುವ",
     subtitle: "ಪ್ರತಿ ಕೃಷಿ ಸಮಸ್ಯೆಗೆ ಪರಿಹಾರಗಳು",
     commonIssues: "ಸಾಮಾನ್ಯ ಸಮಸ್ಯೆಗಳು",
     videos: "ಶೈಕ್ಷಣಿಕ ವೀಡಿಯೊಗಳು",
@@ -139,6 +144,7 @@ const translations = {
   },
   ml: {
     title: "സഹായ കേന്ദ്രം",
+    upcoming: "വരാനിരിക്കുന്ന",
     subtitle: "എല്ലാ കൃഷി പ്രശ്നങ്ങൾക്കും പരിഹാരങ്ങൾ",
     commonIssues: "സാധാരണ പ്രശ്നങ്ങൾ",
     videos: "വിദ്യാഭ്യാസ വീഡിയോകൾ",
@@ -162,6 +168,7 @@ const translations = {
   },
   bn: {
     title: "সহায়তা কেন্দ্র",
+    upcoming: "আসন্ন",
     subtitle: "প্রতিটি কৃষি সমস্যার সমাধান",
     commonIssues: "সাধারণ সমস্যা",
     videos: "শিক্ষামূলক ভিডিও",
@@ -185,6 +192,7 @@ const translations = {
   },
   gu: {
     title: "સહાય કેન્દ્ર",
+    upcoming: "આગામી",
     subtitle: "દરેક ખેતી સમસ્યાનો ઉકેલ",
     commonIssues: "સામાન્ય સમસ્યાઓ",
     videos: "શૈક્ષણિક વિડિઓઝ",
@@ -208,6 +216,7 @@ const translations = {
   },
   mr: {
     title: "मदत केंद्र",
+    upcoming: "येणाऱ्या",
     subtitle: "प्रत्येक शेती समस्येचे समाधान",
     commonIssues: "सामान्य समस्या",
     videos: "शैक्षणिक व्हिडिओ",
@@ -231,6 +240,7 @@ const translations = {
   },
   pa: {
     title: "ਸਹਾਇਤਾ ਕੇਂਦਰ",
+    upcoming: "ਆਉਣ ਵਾਲੀ",
     subtitle: "ਹਰ ਖੇਤੀ ਸਮੱਸਿਆ ਦਾ ਹੱਲ",
     commonIssues: "ਆਮ ਸਮੱਸਿਆਵਾਂ",
     videos: "ਸਿੱਖਿਆਦਾਇਕ ਵੀਡੀਓ",
@@ -254,6 +264,7 @@ const translations = {
   },
   ur: {
     title: "امدادی مرکز",
+    upcoming: "آئندہ",
     subtitle: "ہر زرعی مسئلے کا حل",
     commonIssues: "عام مسائل",
     videos: "تعلیمی ویڈیوز",
@@ -277,6 +288,7 @@ const translations = {
   },
   or: {
     title: "ସହାୟତା କେନ୍ଦ୍ର",
+    upcoming: "ଆଗାମୀ",
     subtitle: "ପ୍ରତ୍ୟେକ କୃଷି ସମସ୍ୟାର ସମାଧାନ",
     commonIssues: "ସାଧାରଣ ସମସ୍ୟା",
     videos: "ଶିକ୍ଷାମୂଳକ ଭିଡିଓ",
@@ -300,6 +312,7 @@ const translations = {
   },
   as: {
     title: "সহায়তা কেন্দ্ৰ",
+    upcoming: "আগামী",
     subtitle: "প্ৰতিটো কৃষি সমস্যাৰ সমাধান",
     commonIssues: "সাধাৰণ সমস্যা",
     videos: "शैक्षिक ভিডিঅ",
@@ -323,6 +336,7 @@ const translations = {
   },
   bho: {
     title: "मदद केंद्र",
+    upcoming: "आगामी",
     subtitle: "हर खेती के समस्या के समाधान",
     commonIssues: "आम समस्या",
     videos: "शिक्षा वीडियो",
@@ -346,6 +360,7 @@ const translations = {
   },
   mai: {
     title: "सहायता केंद्र",
+    upcoming: "आगामी",
     subtitle: "हर खेती समस्याक समाधान",
     commonIssues: "आम समस्या",
     videos: "शिक्षा वीडियो",
@@ -369,6 +384,7 @@ const translations = {
   },
   mag: {
     title: "सहायता केंद्र",
+    upcoming: "आगामी",
     subtitle: "हर खेती समस्या के समाधान",
     commonIssues: "आम समस्या",
     videos: "शिक्षा वीडियो",
@@ -392,6 +408,7 @@ const translations = {
   },
   sa: {
     title: "साहाय्यकेन्द्रम्",
+    upcoming: "आगमिष्यमान",
     subtitle: "प्रत्येककृषिसमस्यायाः समाधानम्",
     commonIssues: "सामान्यसमस्याः",
     videos: "शैक्षणिकवीडियो",
@@ -415,6 +432,7 @@ const translations = {
   },
   sd: {
     title: "مدد مرڪز",
+    upcoming: "ايندڙ",
     subtitle: "هر زرعي مسئلي جو حل",
     commonIssues: "عام مسئلا",
     videos: "تعليمي وڊيوز",
@@ -438,6 +456,7 @@ const translations = {
   },
   ne: {
     title: "सहायता केन्द्र",
+    upcoming: "आउने",
     subtitle: "हरेक खेती समस्याको समाधान",
     commonIssues: "सामान्य समस्याहरू",
     videos: "शैक्षिक भिडियोहरू",
@@ -461,6 +480,7 @@ const translations = {
   },
   kok: {
     title: "मदत केंद्र",
+    upcoming: "येणाऱ्या",
     subtitle: "प्रत्येक शेती समस्येचे समाधान",
     commonIssues: "सामान्य समस्या",
     videos: "शैक्षणिक व्हिडीओ",
@@ -484,6 +504,7 @@ const translations = {
   },
   mni: {
     title: " মতেং পাংফম",
+    upcoming: "ꯃꯤꯅꯥꯝꯕꯥ",
     subtitle: " লৌউবগী সমস্যা খুদিংমক্কী সমাধান",
     commonIssues: "সাধাৰণ সমস্যা",
     videos: "শিক্ষামূলক ভিডিও",
@@ -507,6 +528,7 @@ const translations = {
   },
   bo: {
     title: "རོགས་སྐྱོར་ལྟེ་གནས།",
+    upcoming: "འགྲོ་བ་སྔོན་པོ",
     subtitle: "ཞིང་ལས་ཀྱི་དཀའ་ངལ་គ្រប់རིགས་ལ་ መፍትሄ།",
     commonIssues: "དཀའ་ངལ་ පොදු།",
     videos: "ཤེས་ཡོན་གྱི་བརྙན་འཕྲིན།",
@@ -530,6 +552,7 @@ const translations = {
   },
   ks: {
     title: "مدد مرکز",
+    upcoming: "آہٕنٛد",
     subtitle: "هر زرعی مسئلہ حل",
     commonIssues: "عام مسئلہ",
     videos: "تعلیمی ویڈیو",
@@ -553,6 +576,7 @@ const translations = {
   },
   doi: {
     title: "मदद केंद्र",
+    upcoming: "ਆਉਣ ਵਾਲੀ",
     subtitle: "हर खेती दी समस्या दा हल",
     commonIssues: "आम मसले",
     videos: "सिखलाई आले वीडियो",
@@ -1370,7 +1394,7 @@ export default function SupportPage({
             <HelpCircle className="h-10 w-10 text-white" />
           </div>
           <h1 className="text-2xl mb-2 text-indigo-800">
-            {t.title}
+            {`${t.title} (${t.upcoming})`}
           </h1>
           <p className="text-indigo-600">{t.subtitle}</p>
         </motion.div>
